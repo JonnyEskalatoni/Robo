@@ -122,9 +122,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;ali
 .crow{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ts);line-height:1.5}.crow svg{width:15px;height:15px;color:var(--ok);flex-shrink:0;margin-top:2px}
 .ccard{background:#ffffff;border:1px solid var(--border);border-radius:var(--rl);padding:36px;position:relative;box-shadow:0 2px 8px rgba(16,36,58,.05)}
 .ctag{position:absolute;top:-11px;left:22px;background:var(--acc);color:#ffffff;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 12px;border-radius:2px}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;align-items:end}
 .ff{display:flex;flex-direction:column;gap:6px}.ff.full{grid-column:1/-1}
-.ff label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--tm)}
+.ff label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--tm);min-height:2.6em;display:flex;align-items:flex-end}
 .ff input,.ff select{background:#f5f7fa;border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;font-weight:500;padding:10px 13px;outline:none;transition:border-color var(--t),box-shadow var(--t);width:100%;-webkit-appearance:none}
 .ff input:focus,.ff select:focus{border-color:rgba(58,123,213,.5);box-shadow:0 0 0 3px rgba(58,123,213,.09);background:#fff}
 .ff input::placeholder{color:var(--tm);font-size:14px}.ff select option{background:#fff;color:var(--text)}
@@ -141,6 +141,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;ali
 .rnote.good{border-left-color:var(--ok)}.rnote.neutral{border-left-color:var(--warn)}
 .ccta{width:100%;background:var(--acc);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.ccta:hover{background:var(--acc2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(39,95,168,.28)}.ccta svg{width:15px;height:15px}
 .cempty{text-align:center;padding:24px 0 8px;color:var(--tm);font-size:13px;line-height:1.6}.cempty svg{width:28px;height:28px;color:var(--border);margin:0 auto 10px}
+.rrecom{background:linear-gradient(135deg,rgba(47,128,237,.06) 0%,rgba(47,128,237,.02) 100%);border:1px solid rgba(47,128,237,.22);border-radius:var(--r);padding:16px 18px;margin-bottom:14px}.rrecom-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}.rrecom-badge{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--acc);color:#fff;padding:3px 8px;border-radius:2px;white-space:nowrap}.rrecom-model{font-family:"Inter Tight",sans-serif;font-size:17px;font-weight:800;color:var(--text)}.rrecom-desc{font-size:13px;color:var(--ts);line-height:1.55;margin-bottom:10px}.rrecom-specs{display:flex;gap:16px;flex-wrap:wrap}.rrecom-spec{font-size:12px;color:var(--tm);display:flex;align-items:center;gap:5px}.rrecom-spec strong{color:var(--text);font-weight:600}.rrecom-hint{font-size:12px;color:var(--warn);font-style:italic;padding:10px 14px;background:rgba(217,119,6,.05);border-left:2px solid var(--warn);border-radius:0 var(--r) var(--r) 0}
 
 /* PROCESS */
 .proc{padding:88px 0;background:#f5f7fa;border-top:1px solid var(--border)}
@@ -302,9 +303,18 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
 <div class="hproof">
       <div class="hproof-kpis">
         <div>
-          <span class="pnum">Mehr Aufträge</span>
-          <div class="plbl">Auch bei Personalmangel umsetzbar</div>
+          <span class="pnum">0,04 €/m²</span>
+          <div class="plbl">Monatlicher Mietpreis inkl. aller Leistungen</div>
         </div>
+        <div>
+          <span class="pnum">Keine Investition</span>
+          <div class="plbl">Kein Kauf, keine Einmalkosten</div>
+        </div>
+        <div>
+          <span class="pnum">Alles inklusive</span>
+          <div class="plbl">Wartung, Service, Software, Reinigungsmittel</div>
+        </div>
+      </div>
         <div>
           <span class="pnum">Automatisiert skalieren</span>
           <div class="plbl">Flächen ausbauen statt Personal aufbauen</div>
@@ -392,50 +402,36 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
 <section class="calc" id="rechner">
   <div class="con">
     <div class="clay">
-      <div class="ci reveal">
-        <div class="tag">Kostenkalkulation</div>
-        <h2>Was kostet ein Objekt ohne Robotik – und was mit?</h2>
-        <p>Die meisten Reinigungsunternehmen kennen ihren Stundenaufwand pro Objekt.<br>Aber die echten Kosten – inklusive Ausfälle, Einarbeitung und Organisation – liegen deutlich höher.</p>
-        <div class="cnote">Diese Berechnung zeigt eine realistische erste Einschätzung.<br>Die finale Kalkulation erfolgt individuell.</div>
-        <div class="clist">
-          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Lohnnebenkosten und Ausfälle berücksichtigt</div>
-          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Passendes System für Ihre Kundenflächen vorgeschlagen</div>
-          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Kalkulation pro Objekt transparent dargestellt</div>
-          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Kauf oder Leasing möglich</div>
-        </div>
+            <div class="ci reveal">
+        <div class="tag">Kostenvergleich</div>
+        <h2>Was sparen Ihre Kunden – und was verbessert das Ihr Angebot?</h2>
+        <p>Manuelle Reinigung kostet im Schnitt ca. <strong>0,15 € pro m²</strong>. Das Mietmodell für Reinigungsrobotik kostet ca. <strong>0,04 € pro m²</strong> – alles inklusive. Keine Investition. Keine versteckten Kosten. Abrechnung nur für tatsächlich gereinigte Fläche.</p>
       </div>
       <div class="ccard reveal d1">
-        <div class="ctag">ROI-Rechner</div>
+        <div class="ctag">Kostenvergleich</div>
         <div class="fr">
-          <div class="ff"><label>Fläche beim Kunden (m²)</label><input type="number" id="c-f" placeholder="z. B. 2.000" min="100" oninput="rc()"></div>
-          <div class="ff"><label>Reinigungstage pro Woche</label><select id="c-t" onchange="rc()"><option value="5">5 Tage (Mo–Fr)</option><option value="6">6 Tage (Mo–Sa)</option><option value="7">7 Tage</option></select></div>
-        </div>
-        <div class="fr">
-          <div class="ff"><label>Stunden pro Tag (Objekt)</label><input type="number" id="c-s" placeholder="z. B. 4" min="0.5" step="0.5" oninput="rc()"></div>
-          <div class="ff"><label>Eingesetzte Mitarbeiter</label><input type="number" id="c-p" placeholder="z. B. 2" min="1" oninput="rc()"></div>
-        </div>
-        <div class="fr">
-          <div class="ff"><label>Stundenlohn brutto (€)</label><input type="number" id="c-l" placeholder="z. B. 15,00" min="12" step="0.5" oninput="rc()"></div>
-          <div class="ff"><label>Finanzierungsart</label><select id="c-m" onchange="rc()"><option value="kauf">Kauf</option><option value="leasing">Leasing / Miete</option></select></div>
+          <div class="ff"><label>Zu reinigende Fläche (m²)</label><input type="number" id="c-f" placeholder="z. B. 1.500" min="100" oninput="rc()"></div>
+          <div class="ff"><label>Reinigungsfrequenz</label><select id="c-t" onchange="rc()"><option value="30">täglich (ca. 30 Reinigungstage pro Monat)</option><option value="22">werktags (ca. 22 Reinigungstage pro Monat)</option><option value="12">3× pro Woche (ca. 12 Reinigungstage pro Monat)</option><option value="4">1× pro Woche (ca. 4 Reinigungstage pro Monat)</option></select></div>
         </div>
         <div class="cdiv"></div>
         <div class="cres" id="cres">
           <div class="rgrid">
-            <div class="rc"><div class="rcl">Personalkosten / Monat</div><div class="rcv" id="rm">–</div></div>
-            <div class="rc"><div class="rcl">Personalkosten / Jahr</div><div class="rcv" id="rj">–</div></div>
-            <div class="rc"><div class="rcl">Empfohlenes System</div><div class="rcv" id="rsys">–</div></div>
-            <div class="rc"><div class="rcl">Systemkosten</div><div class="rcv" id="ri">–</div></div>
+            <div class="rc"><div class="rcl">Manuelle Reinigung / Monat</div><div class="rcv" id="rm">–</div></div>
+            <div class="rc"><div class="rcl">Robotik-Miete / Monat</div><div class="rcv" id="rj">–</div></div>
+            <div class="rc"><div class="rcl">Einsparung / Monat</div><div class="rcv" id="rsys" style="color:var(--ok,#2E9B66)">–</div></div>
+            <div class="rc"><div class="rcl">Einsparung / Jahr</div><div class="rcv" id="ri" style="color:var(--ok,#2E9B66)">–</div></div>
           </div>
           <div class="rhl">
-            <div class="rhll" id="rhl-label">Ihre mögliche Ersparnis pro Jahr<small>Schätzung – abhängig von Flächeneignung</small></div>
+            <div class="rhll" id="rhl-label">Ihre jährliche Einsparung<small>Vergleich: 0,15 € vs. 0,04 € pro m² und Reinigungszyklus</small></div>
             <div class="rhlv" id="re">–</div>
           </div>
+          <div id="rrecom" style="display:none"></div>
           <div class="rnote" id="rn"></div>
-          <a href="#termin" class="ccta">Robotik prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#termin" class="ccta">Einsatz prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="cempty" id="cemp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="7" y1="8" x2="7" y2="12"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="17" y1="10" x2="17" y2="12"/></svg>
-          Felder ausfüllen, um Ihre Grobkalkulation zu sehen.
+          Geben Sie Ihre Fläche und Reinigungsfrequenz ein, um Ihren monatlichen Kostenvergleich zu berechnen.
         </div>
       </div>
     </div>
@@ -450,7 +446,7 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
     <div class="pgr">
       <div class="ps reveal"><div class="snum">01 Flächenanalyse</div><h3>Flächenanalyse beim Kunden</h3><p>Identifikation geeigneter Bereiche: Bodenbeschaffenheit, Wegeführung, Hindernisse und Reinigungsintervalle.</p></div>
       <div class="ps reveal d1"><div class="snum">02 Einsatzkonzept</div><h3>Einsatzkonzept erstellen</h3><p>Planung der Robotiknutzung pro Objekt – passend zu Kundenvorgaben und Ihren Betriebsabläufen.</p></div>
-      <div class="ps reveal d2"><div class="snum">03 Wirtschaftlichkeit</div><h3>Wirtschaftlichkeitsprüfung</h3><p>Kalkulation pro Objekt: Personalkosten vs. Robotikkosten, Amortisation und Margenvorteil.</p></div>
+      <div class="ps reveal d2"><div class="snum">03 Wirtschaftlichkeit</div><h3>Wirtschaftlichkeitsprüfung</h3><p>Kalkulation pro Objekt: Personalkosten vs. Robotikkosten, Einsparung und Margenvorteil.</p></div>
       <div class="ps reveal d3"><div class="snum">04 Einrichtung &amp; Start</div><h3>Einrichtung und Start</h3><p>Integration in den laufenden Betrieb: Mapping, Einweisung Ihres Teams, Start des autonomen Betriebs.</p></div>
     </div>
     <div class="pmedia reveal">
@@ -496,10 +492,16 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
         <div class="fcon"><p>Weitere Fragen?<br><a href="#termin">Robotik unverbindlich prüfen lassen →</a></p></div>
       </div>
       <div class="flist reveal d1">
+                <div class="fitem" onclick="tf(this)"><div class="fq">Was kostet der Einsatz eines Reinigungsroboters?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai"><strong>0,04 € pro m² pro Reinigungszyklus.</strong><br><br>Monatliche Abrechnung ohne Einmalkosten. Zum Vergleich: manuelle Reinigung kostet im Schnitt 0,15 € pro m². Die typische Einsparung liegt bei bis zu 70 %.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Muss ich einen Roboter kaufen?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai"><strong>Nein.</strong> Es gibt ausschließlich das Mietmodell. Keine Kaufoption, keine Investitionskosten, keine Kapitalbindung. Mindestlaufzeit 36 Monate, danach monatlich kündbar mit 3 Monaten Frist.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Sind Wartungskosten enthalten?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Ja, vollständig. Im Mietpreis sind enthalten:<br><br>· Wartung &amp; Ersatzteile<br>· Reinigungsmittel &amp; Verbrauchsmaterial<br>· Software &amp; Fernwartung<br>· Installation &amp; Einweisung<br><br>Keine versteckten Folgekosten.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Was passiert bei Defekten?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Defekte sind vollständig abgesichert. Ersatzteile, Reparatur und Austausch sind im Mietpreis enthalten. Service erfolgt über zertifizierte Partner mit definierten Reaktionszeiten.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Wie wird abgerechnet?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Monatlich, nach vereinbarter Fläche und Reinigungszyklen:<br><br><strong>Fläche (m²) × 0,04 € × Zyklen pro Monat</strong><br><br>Transparente, planbare Kosten ohne Überraschungen.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Was passiert nach 36 Monaten?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Nach der Mindestlaufzeit von 36 Monaten verlängert sich der Vertrag monatlich. Kündigung ist dann mit 3 Monaten Frist möglich – kein erneuter Langzeitvertrag erforderlich.</div></div></div>
         <div class="fitem" onclick="tf(this)"><div class="fq">Wie lässt sich Robotik in bestehende Objekte integrieren?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">In der Regel ohne Umbau. Der Roboter wird auf die vorhandene Fläche kartiert – in einem halben bis einem Tag.<br><br>Ihr Team wird eingewiesen. Danach läuft der Betrieb autonom. <strong>Die Integration stört den laufenden Kundenbetrieb nicht.</strong></div></div></div>
         <div class="fitem" onclick="tf(this)"><div class="fq">Welche Flächen eignen sich besonders?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Am besten geeignet sind: <strong>große, standardisierbare Flächen</strong> mit regelmäßigem Reinigungsbedarf. Typisch:<br><br>· Produktions- oder Lagerflächen ab ca. 500 m²<br>· Büro- oder Gewerbeflächen mit täglichem Bedarf<br>· Einkaufs- oder Publikumsflächen mit Wiederholungscharakter<br><br>Ungeeignet sind unstrukturierte Flächen mit vielen Hindernissen oder unregelmäßigem Bedarf.</div></div></div>
         <div class="fitem" onclick="tf(this)"><div class="fq">Wie verändert sich die Kalkulation pro Objekt?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Der Roboter ersetzt einen Teil der Personalstunden auf geeigneten Flächen. Das senkt die Kosten pro Objekt und verbessert Ihre Marge.<br><br>Typisch: <strong>30–50 % der Reinigungsstunden</strong> auf geeigneten Flächen können automatisiert werden. Der Rest bleibt manuelle Arbeit.<br><br>Unser Rechner zeigt Ihnen auf Basis Ihrer echten Kosten, wie sich die Kalkulation verändert.</div></div></div>
-        <div class="fitem" onclick="tf(this)"><div class="fq">Wie schnell rechnet sich der Einsatz?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Das hängt von der Objektgröße und Reinigungsfrequenz ab. Bei täglicher Reinigung und Flächen ab 500 m² ist eine Amortisation in <strong>8–18 Monaten</strong> realistisch.<br><br>Für Reinigungsunternehmen mit mehreren Objekten: Wird ein Roboter auf mehreren geeigneten Objekten rotierend eingesetzt, verbessert sich die Wirtschaftlichkeit deutlich.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Wie schnell rechnet sich der Einsatz?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Das hängt von der Objektgröße und Reinigungsfrequenz ab. Bei täglicher Reinigung und Flächen ab 500 m² ist eine Einsparung von <strong>60–70 %</strong> gegenüber manueller Reinigung realistisch.<br><br>Für Reinigungsunternehmen mit mehreren Objekten: Wird ein Roboter auf mehreren geeigneten Objekten rotierend eingesetzt, verbessert sich die Wirtschaftlichkeit deutlich.</div></div></div>
         <div class="fitem" onclick="tf(this)"><div class="fq">Kann ich den Roboter auf mehreren Kundenobjekten einsetzen?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Ja. Je nach Größe und Frequenz der Objekte kann ein Roboter auf mehreren Flächen eingesetzt werden – durch geplante Rotation.<br><br><strong>Das verbessert die Wirtschaftlichkeit pro Gerät</strong> und macht den Einsatz für mittelgroße Betriebe besonders attraktiv.</div></div></div>
         <div class="fitem" onclick="tf(this)"><div class="fq">Was passiert bei einem technischen Ausfall?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Service und Wartung laufen über zertifizierte Servicepartner mit festen Reaktionszeiten. Wartungsintervalle sind planbar.<br><br><strong>Ein technischer Stopp ist planbar. Personalausfall nicht.</strong> Die Gesamtverfügbarkeit eines Robotersystems ist in der Praxis oft höher als die eines Reinigungsteams.</div></div></div>
       </div>
@@ -517,11 +519,11 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
         <p>Der erste Schritt ist eine gemeinsame Analyse Ihrer Kundenflächen – ohne Verpflichtung. Darauf aufbauend erhalten Sie eine konkrete Kalkulation pro Objekt.</p>
         <div class="dsteps">
           <div class="dstep"><div class="dbadge">1</div><div><h4>Flächenanalyse</h4><p>Wir analysieren geeignete Kundenflächen aus Ihrem Bestand. Kostenlos und unverbindlich.</p></div></div>
-          <div class="dstep"><div class="dbadge">2</div><div><h4>Kalkulation pro Objekt</h4><p>Sie erhalten eine realistische Kalkulation – Personalkosten vs. Robotikkosten, Amortisation und Margenvorteil.</p></div></div>
+          <div class="dstep"><div class="dbadge">2</div><div><h4>Kalkulation pro Objekt</h4><p>Sie erhalten eine realistische Kalkulation – Personalkosten vs. Robotikkosten, Einsparung und Margenvorteil.</p></div></div>
           <div class="dstep"><div class="dbadge">3</div><div><h4>Live-Demo (optional)</h4><p>Sehen Sie den Roboter in einer vergleichbaren Kundenumgebung – vor Ort in Kempten oder per Videoschaltung.</p></div></div>
         </div>
       </div>
-                  <form action="form-handler.php" method="POST" id="contact-form-reinigungsunternehmen">
+                  <form action="thank-you.html?from=reinigungsunternehmen" method="GET" id="contact-form-reinigungsunternehmen">
       <div class="fcard reveal d1">
         <h3>Anfrage stellen</h3>
         <p class="fsub">Kostenlos, unverbindlich, Rückmeldung binnen 24 Stunden.</p>
@@ -535,9 +537,9 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
         <div class="dr"><div class="df"><label>Geschäftliche E-Mail *</label><input type="email" name="email" placeholder="m.mustermann@firma.de" required maxlength="200" autocomplete="email"></div><div class="df"><label>Telefon *</label><input type="tel" name="telefon" placeholder="+49 ..." required maxlength="50" autocomplete="tel"></div></div>
         <div class="dr"><div class="df full"><label>Unternehmensgröße</label><select name="bereich"><option value="">Bitte wählen …</option><option value="1–5 Mitarbeiter">1–5 Mitarbeiter</option><option value="6–20 Mitarbeiter">6–20 Mitarbeiter</option><option value="21–50 Mitarbeiter">21–50 Mitarbeiter</option><option value="51–200 Mitarbeiter">51–200 Mitarbeiter</option><option value="Über 200 Mitarbeiter">Über 200 Mitarbeiter</option></select></div></div>
         <div class="dr"><div class="df full"><label>Kurze Beschreibung Ihrer Kundenflächen</label><textarea name="nachricht" rows="3" placeholder="z. B. Bürogebäude 2.000 m², Industriekunden, täglich, aktuell 5 Reinigungskräfte …" maxlength="1000"></textarea></div></div>
-        <div class="dr"><div class="df full" id="dsch-wrap-reinigungsunternehmen" style="margin-top:6px;padding:10px 12px;background:rgba(47,128,237,.04);border:1px solid var(--border);border-radius:var(--r)"><div style="display:flex;align-items:flex-start;gap:10px"><input type="checkbox" name="datenschutz" id="datenschutz_reinigungsunternehmen" value="1" required style="width:16px;height:16px;min-width:16px;margin-top:1px;flex-shrink:0;accent-color:var(--acc);cursor:pointer;position:relative;z-index:1"><label for="datenschutz_reinigungsunternehmen" style="font-size:13px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--ts);line-height:1.55;cursor:pointer">Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener" style="color:var(--acc);text-decoration:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</label></div></div></div>
+        
         <button class="dsub" type="submit">Geschäftsmodell prüfen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        <p class="fdisc">Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
+        <p class="fdisc">Mit dem Absenden des Formulars stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer <a href="datenschutz.html" target="_blank" rel="noopener" style="color:var(--acc);text-decoration:underline">Datenschutzerklärung</a> zu. Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
         <div class="demo-optional">
           <div class="demo-opt-label">Live-Demo optional</div>
           <p>Besuchen Sie unser Demo-Gelände in Kempten oder sehen Sie den Roboter per Videoschaltung.</p>
@@ -575,35 +577,108 @@ function tf(el){const o=el.classList.contains('open');document.querySelectorAll(
 
 /* CALCULATOR */
 const fmt=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+
+/* Roboter-Datenbank */
+const ROBOTS=[
+  {
+    model:'KLEENBOT C30',
+    badge:'Kompaktlösung',
+    desc:'Kompakte Lösung für kleinere Flächenbereiche und Teilflächen.',
+    leistung:'ca. 600 m²/h',
+    laufzeit:'6–10 Stunden',
+    maxDaily:1500
+  },
+  {
+    model:'KLEENBOT C40',
+    badge:'Standardlösung',
+    desc:'Standardlösung für mittlere Flächen mit regelmäßiger Reinigung.',
+    leistung:'bis 1.100 m²/h',
+    laufzeit:'bis 12 Stunden',
+    maxDaily:4000
+  },
+  {
+    model:'KLEENBOT C55',
+    badge:'Großflächenlösung',
+    desc:'Großflächenlösung für maximale Leistung und industrielle Anforderungen.',
+    leistung:'bis 2.376 m²/h',
+    laufzeit:'bis 5 Stunden',
+    maxDaily:Infinity
+  }
+];
+
+function getRobot(taeglicheFlaeche){
+  for(var i=0;i<ROBOTS.length;i++){
+    if(taeglicheFlaeche<=ROBOTS[i].maxDaily) return ROBOTS[i];
+  }
+  return ROBOTS[2];
+}
+
+function buildRecomHTML(robot,prefix){
+  var p=prefix||'';
+  return '<div class="'+p+'rrecom-head">'
+    +'<span class="'+p+'rrecom-badge">Empfohlenes Modell</span>'
+    +'<span class="'+p+'rrecom-model">'+robot.model+'</span>'
+    +'</div>'
+    +'<div class="'+p+'rrecom-desc">'+robot.desc+'</div>'
+    +'<div class="'+p+'rrecom-specs">'
+    +'<span class="'+p+'rrecom-spec"><strong>Leistung:</strong>&nbsp;'+robot.leistung+'</span>'
+    +'<span class="'+p+'rrecom-spec"><strong>Laufzeit:</strong>&nbsp;'+robot.laufzeit+'</span>'
+    +'</div>';
+}
+
 function rc(){
-  const f=parseFloat(document.getElementById('c-f').value)||0;
-  const t=parseFloat(document.getElementById('c-t').value)||7;
-  const s=parseFloat(document.getElementById('c-s').value)||0;
-  const p=parseFloat(document.getElementById('c-p').value)||0;
-  const l=parseFloat(document.getElementById('c-l').value)||0;
-  const m=document.getElementById('c-m').value;
-  const re=document.getElementById('cres'),em=document.getElementById('cemp');
-  if(!f||!s||!p||!l){re.classList.remove('on');em.style.display='block';return;}
-  const ag=l*1.35,stm=s*p*t*4.33,km=ag*stm,kj=km*12;
-  let sys,rp,wj;
-  if(f<800){sys='Kompaktsystem';rp=9500;wj=650;}
-  else if(f<3000){sys='Mittelklassesystem';rp=14500;wj=900;}
-  else if(f<8000){sys='Profisystem';rp=19000;wj=1100;}
-  else{sys='Industriesystem';rp=24000;wj=1400;}
-  const lmo=Math.round(rp/48*1.18);
-  const rj2=m==='leasing'?lmo*12+wj:rp+wj;
-  const sub=0.65,eb=kj*sub,en=eb-rj2,am=Math.round(rp/(km*sub));
-  document.getElementById('rm').textContent=fmt(km);
-  document.getElementById('rj').textContent=fmt(kj);
-  document.getElementById('rsys').textContent=sys;
-  document.getElementById('ri').textContent=m==='leasing'?fmt(lmo)+' / Mo. + '+fmt(wj)+' Wartung':fmt(rp)+' + '+fmt(wj)+' / J.';
-  const ev=document.getElementById('re');
-  if(en>0){ev.textContent=fmt(en);ev.style.color='var(--acc2)';}
-  else{ev.textContent='Amortisation ab Jahr 2';ev.style.color='var(--warn)';}
-  const ne=document.getElementById('rn');
-  if(en>8000){document.getElementById('rhl-label').innerHTML='Ihre mögliche Ersparnis pro Jahr<small>Schätzung – abhängig von Flächeneignung</small>';ne.className='rnote good';ne.innerHTML='<strong>Einschätzung:</strong> Der Einsatz eines Roboters ist wirtschaftlich sinnvoll. Eine Demo vor Ort ist der nächste sinnvolle Schritt.';}
-  else if(en>0){document.getElementById('rhl-label').innerHTML='Amortisation voraussichtlich ab Jahr 2<small>Schätzung – abhängig von Flächeneignung</small>';ne.className='rnote neutral';ne.innerHTML='<strong>Einschätzung:</strong> Der wirtschaftliche Vorteil entsteht mittelfristig. Im Gespräch prüfen wir alternative Szenarien (z. B. Leasing).';}
-  else{document.getElementById('rhl-label').innerHTML='Amortisation voraussichtlich ab Jahr 2<small>Schätzung – abhängig von Flächeneignung</small>';ne.className='rnote neutral';ne.innerHTML='<strong>Einschätzung:</strong> Der wirtschaftliche Vorteil entsteht mittelfristig. Im Gespräch prüfen wir alternative Szenarien (z. B. Leasing).';}
+  var f=parseFloat(document.getElementById('c-f').value)||0;
+  var t=parseFloat(document.getElementById('c-t').value)||30;
+  var re=document.getElementById('cres'),em=document.getElementById('cemp');
+  if(!f){re.classList.remove('on');em.style.display='block';return;}
+
+  /* Tägliche Fläche für Modellauswahl */
+  var taeglicheFlaeche=(t>0)?f:(f);
+
+  /* Kleinflächen-Hinweis */
+  if(f<200){
+    re.classList.add('on');em.style.display='none';
+    document.getElementById('rrecom').style.display='block';
+    document.getElementById('rrecom').innerHTML='<div class="rrecom-hint">Für kleinere Flächen prüfen wir individuelle Lösungen – sprechen Sie uns direkt an.</div>';
+    document.getElementById('rm').textContent='–';
+    document.getElementById('rj').textContent='–';
+    document.getElementById('rsys').textContent='–';
+    document.getElementById('ri').textContent='–';
+    document.getElementById('re').textContent='–';
+    document.getElementById('rn').className='rnote neutral';
+    document.getElementById('rn').innerHTML='<strong>Hinweis:</strong> Bei sehr kleinen Flächen empfehlen wir ein persönliches Gespräch zur Bedarfsklärung.';
+    document.getElementById('rhl-label').innerHTML='Empfehlung<small>individuelle Prüfung notwendig</small>';
+    return;
+  }
+
+  var preisManuel=0.15,preisRobotik=0.04;
+  var kostenManuellM=f*preisManuel*t;
+  var kostenRobotikM=f*preisRobotik*t;
+  var ersparungM=kostenManuellM-kostenRobotikM;
+  var ersparungJ=ersparungM*12;
+  var prozent=Math.round((ersparungM/kostenManuellM)*100);
+
+  /* Modellauswahl: tägliche Fläche = Gesamtfläche (einmalige Route pro Zyklus) */
+  var robot=getRobot(f);
+
+  document.getElementById('rm').textContent=fmt(kostenManuellM);
+  document.getElementById('rj').textContent=fmt(kostenRobotikM);
+  document.getElementById('rsys').textContent=fmt(ersparungM);
+  document.getElementById('ri').textContent=fmt(ersparungJ);
+  document.getElementById('re').textContent=fmt(ersparungJ);
+  document.getElementById('re').style.color='var(--ok,#2E9B66)';
+
+  document.getElementById('rhl-label').innerHTML='Ihre jährliche Einsparung<small>ab 0,04 €/m² – abhängig von Modell und Einsatzbedingungen</small>';
+
+  document.getElementById('rn').className='rnote good';
+  document.getElementById('rn').innerHTML='<strong>'+prozent+' % Einsparung</strong> gegenüber manueller Reinigung. Keine Investition – monatliche Abrechnung ab 0,04 €/m².';
+
+  /* Empfehlungsblock */
+  var rec=document.getElementById('rrecom');
+  rec.className='rrecom';
+  rec.style.display='block';
+  rec.innerHTML=buildRecomHTML(robot,'');
+
   re.classList.add('on');em.style.display='none';
 }
 </script>
@@ -633,17 +708,6 @@ function rc(){
         el.style.borderColor = '';
       }
     });
-
-    /* Datenschutz-Checkbox */
-    var cb = document.getElementById('datenschutz_reinigungsunternehmen');
-    if (cb && !cb.checked) {
-      var wrap = document.getElementById('dsch-wrap-reinigungsunternehmen');
-      if (wrap) { wrap.style.outline = '2px solid rgba(245,166,35,.65)'; }
-      valid = false;
-    } else if (cb) {
-      var wrap2 = document.getElementById('dsch-wrap-reinigungsunternehmen');
-      if (wrap2) { wrap2.style.outline = ''; }
-    }
 
     if (!valid) { evt.preventDefault(); }
   });

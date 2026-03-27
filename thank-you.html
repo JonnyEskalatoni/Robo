@@ -3,19 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anfrage eingegangen â LÃ¶we Smart Devices</title>
+<title>Anfrage eingegangen – Löwe Smart Devices</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F4F7FB;--bgs:#FFFFFF;--soft:#EDF3FA;--alt:#E9EFF6;--text:#0E2238;--ts:#5B6B7C;--tm:#8A97A4;--border:#D6E0EA;--borders:#E4ECF4;--acc:#2F76CC;--acc2:#1E5EA6;--adim:rgba(47,118,204,.08);--ok:#2E9B66;--ok-dim:rgba(46,155,102,.09);--ok-bdr:rgba(46,155,102,.20);--r:5px;--rl:10px;--t:0.2s ease;--mw:740px}
+:root{
+  --bg:#F4F7FB; --bgs:#FFFFFF; --soft:#EDF3FA; --alt:#E9EFF6;
+  --text:#0E2238; --ts:#5B6B7C; --tm:#8A97A4;
+  --border:#D6E0EA; --borders:#E4ECF4;
+  --acc:#2F76CC; --acc2:#1E5EA6; --adim:rgba(47,118,204,.08);
+  --ok:#2E9B66; --ok-dim:rgba(46,155,102,.09); --ok-bdr:rgba(46,155,102,.20);
+  --r:5px; --rl:10px; --t:0.2s ease; --mw:740px
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:'Inter Tight',sans-serif;letter-spacing:-.022em;color:var(--text);font-weight:700}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
+
+/* ── NAV ── */
 nav{height:64px;display:flex;align-items:center;background:#fff;border-bottom:1px solid var(--border);padding:0 48px;justify-content:space-between;position:sticky;top:0;z-index:100}
 .nl{display:flex;align-items:center;gap:10px}
 .lm{width:30px;height:30px;background:var(--acc);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -23,9 +32,15 @@ nav{height:64px;display:flex;align-items:center;background:#fff;border-bottom:1p
 .lt{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:15px;color:var(--text);letter-spacing:-.02em}.lt span{color:var(--acc)}
 .nav-back{font-size:13px;font-weight:500;color:var(--ts);display:flex;align-items:center;gap:6px;transition:color var(--t);white-space:nowrap}.nav-back:hover{color:var(--acc)}
 .nav-back svg{width:14px;height:14px;flex-shrink:0}
+
+/* ── LAYOUT ── */
 main{flex:1;display:flex;flex-direction:column;align-items:center;padding:52px 24px 80px}
 .con{width:100%;max-width:var(--mw);display:flex;flex-direction:column;gap:14px}
+
+/* ── SHARED CARD ── */
 .card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);box-shadow:0 2px 16px rgba(14,34,56,.05)}
+
+/* ── BLOCK 1: BESTÄTIGUNG ── */
 .b-success{padding:48px 52px 40px;text-align:center}
 .check-ring{width:58px;height:58px;background:var(--ok-dim);border:1.5px solid var(--ok-bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 26px}
 .check-ring svg{width:24px;height:24px;color:var(--ok)}
@@ -35,6 +50,8 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;padding:52px 2
 .note-box{display:inline-flex;align-items:flex-start;gap:11px;background:var(--soft);border:1px solid var(--borders);border-radius:var(--r);padding:13px 17px;text-align:left;max-width:460px;margin:0 auto}
 .note-box svg{width:15px;height:15px;color:var(--ok);flex-shrink:0;margin-top:2px}
 .note-box p{font-size:13px;color:var(--ts);line-height:1.60}.note-box strong{color:var(--text);font-weight:600}
+
+/* ── BLOCK 2: PERSON ── */
 .b-person{padding:30px 40px;display:flex;align-items:center;gap:28px}
 .person-photo{width:82px;height:82px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--border);background:var(--alt);position:relative}
 .person-photo img{width:100%;height:140%;object-fit:cover;object-position:center top;position:absolute;top:0;left:0}
@@ -43,6 +60,8 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;padding:52px 2
 .person-name{font-family:'Inter Tight',sans-serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:1px}
 .person-role{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
 .person-text{font-size:13.5px;color:var(--ts);line-height:1.68;max-width:430px}
+
+/* ── BLOCK 3: CALENDLY ── */
 .b-cal{padding:32px 40px}
 .b-cal h2{font-size:18px;font-weight:700;margin-bottom:7px}
 .b-cal .intro{font-size:14px;color:var(--ts);line-height:1.68;margin-bottom:22px;max-width:500px}
@@ -53,6 +72,8 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;padding:52px 2
 .cal-embed h3{font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px}
 .cal-embed p{font-size:12.5px;color:var(--ts);line-height:1.62;margin-bottom:10px}
 .cal-embed code{display:inline-block;font-size:11px;color:var(--acc);background:rgba(47,118,204,.08);border:1px solid rgba(47,118,204,.15);padding:3px 11px;border-radius:3px;font-family:monospace}
+
+/* ── BLOCK 4: NEXT STEPS ── */
 .b-steps{padding:32px 40px}
 .b-steps h2{font-size:17px;font-weight:700;margin-bottom:18px}
 .steps-list{display:flex;flex-direction:column;gap:0}
@@ -60,6 +81,8 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;padding:52px 2
 .step:last-child{border-bottom:none;padding-bottom:0}
 .step-num{width:26px;height:26px;background:var(--adim);border:1px solid rgba(47,118,204,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:700;color:var(--acc);flex-shrink:0;margin-top:1px}
 .step-text{font-size:14px;color:var(--ts);line-height:1.65}.step-text strong{color:var(--text);font-weight:600}
+
+/* ── BLOCK 5: CHECKLISTE ── */
 .b-check{padding:30px 40px;background:var(--soft);border-radius:var(--rl)}
 .b-check .check-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}
 .b-check .check-icon{width:32px;height:32px;background:#fff;border:1px solid var(--border);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}.b-check .check-icon svg{width:14px;height:14px;color:var(--acc)}
@@ -69,103 +92,229 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;padding:52px 2
 .ci{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ts);line-height:1.60}
 .ci::before{content:'';width:5px;height:5px;background:var(--acc);border-radius:50%;flex-shrink:0;margin-top:7px;opacity:.6}
 .check-opt{font-size:11.5px;color:var(--tm);margin-top:12px;font-style:italic;padding-top:10px;border-top:1px solid var(--border)}
+
+/* ── BACK BOTTOM ── */
 .back-bottom{text-align:center;padding:6px 0 2px}
 .back-bottom a{font-size:12.5px;font-weight:500;color:var(--tm);display:inline-flex;align-items:center;gap:5px;transition:color var(--t)}.back-bottom a:hover{color:var(--acc)}
 .back-bottom svg{width:12px;height:12px;flex-shrink:0}
+
+/* ── FOOTER ── */
 footer{background:#fff;border-top:1px solid var(--border);padding:18px 48px;text-align:center}
 footer p{font-size:12px;color:var(--tm);line-height:1.72}
 footer a{color:var(--acc);transition:color var(--t)}
-@media(max-width:640px){nav{padding:0 20px}.b-success{padding:32px 22px 28px}.b-success h1{font-size:23px}.b-person{flex-direction:column;align-items:flex-start;padding:24px 22px;gap:16px}.b-cal,.b-steps,.b-check{padding:24px 22px}footer{padding:16px 20px}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  nav{padding:0 20px}
+  .b-success{padding:32px 22px 28px}
+  .b-success h1{font-size:23px}
+  .b-person{flex-direction:column;align-items:flex-start;padding:24px 22px;gap:16px}
+  .b-cal,.b-steps,.b-check{padding:24px 22px}
+  footer{padding:16px 20px}
+}
 @media(max-width:380px){.nav-back .nav-back-label{display:none}}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="loewe-v3.html" class="nl">
     <div class="lm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M12 2C8 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="2.5" fill="#fff" stroke="none"/></svg></div>
-    <span class="lt">LÃ¶we Smart<span> Devices</span></span>
+    <span class="lt">Löwe Smart<span> Devices</span></span>
   </a>
   <a href="#" class="nav-back" id="nav-back">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-    <span id="nav-back-label" class="nav-back-label">ZurÃ¼ck zur Startseite</span>
+    <span id="nav-back-label" class="nav-back-label">Zurück zur Startseite</span>
   </a>
 </nav>
+
 <main>
 <div class="con">
+
+  <!-- BLOCK 1: BESTÄTIGUNG -->
   <div class="card b-success">
-    <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+    <div class="check-ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg>
+    </div>
     <h1>Ihre Anfrage ist eingegangen.</h1>
-    <p class="lead">Wir melden uns in der Regel innerhalb von 24 bis 48&nbsp;Stunden persÃ¶nlich bei Ihnen.</p>
-    <p class="timing">Unsere RÃ¼ckmeldung erfolgt werktags von Montag bis Freitag zwischen 8:00 und 16:00&nbsp;Uhr.<br>Wenn es schneller gehen soll, kÃ¶nnen Sie direkt unten einen Termin auswÃ¤hlen.</p>
-    <div class="note-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg><p><strong>Kein automatisches Mailing.</strong><br>Sie erhalten eine persÃ¶nliche RÃ¼ckmeldung von uns â mit konkretem Bezug zu Ihrer Anfrage.</p></div>
+    <p class="lead">Wir melden uns in der Regel innerhalb von 24 bis 48&nbsp;Stunden persönlich bei Ihnen.</p>
+    <p class="timing">Unsere Rückmeldung erfolgt werktags von Montag bis Freitag zwischen 8:00 und 16:00&nbsp;Uhr.<br>Wenn es schneller gehen soll, können Sie direkt unten einen Termin auswählen.</p>
+    <div class="note-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg>
+      <p><strong>Kein automatisches Mailing.</strong><br>Sie erhalten eine persönliche Rückmeldung von uns – mit konkretem Bezug zu Ihrer Anfrage.</p>
+    </div>
   </div>
+
+  <!-- BLOCK 2: ANSPRECHPARTNER -->
   <div class="card b-person">
     <div class="person-photo" id="photo-wrap">
-      <img src="assets/images/portrait-jonathan-fuchs.jpg" alt="Jonathan Fuchs, Vertriebsleiter" onerror="document.getElementById('photo-wrap').innerHTML='&lt;div class=&quot;initials&quot;&gt;JF&lt;/div&gt;'">
+      <img src="portrait-jonathan-fuchs.jpg" alt="Jonathan Fuchs, Vertriebsleiter"
+           onerror="document.getElementById('photo-wrap').innerHTML='<div class=\'initials\'>JF</div>'">
     </div>
     <div class="person-info">
       <div class="person-name">Jonathan Fuchs</div>
       <div class="person-role">Vertriebsleiter</div>
-      <p class="person-text">Jonathan oder ein Mitglied unseres Teams meldet sich persÃ¶nlich bei Ihnen. So stellen wir sicher, dass Ihre Anfrage individuell geprÃ¼ft wird.</p>
+      <p class="person-text">Jonathan oder ein Mitglied unseres Teams meldet sich persönlich bei Ihnen. So stellen wir sicher, dass Ihre Anfrage individuell geprüft wird.</p>
     </div>
   </div>
+
+  <!-- BLOCK 3: TERMIN BUCHEN -->
   <div class="card b-cal">
-    <h2>MÃ¶chten Sie schneller starten?</h2>
-    <p class="intro">WÃ¤hlen Sie direkt einen Termin fÃ¼r ein kurzes ErstgesprÃ¤ch.<br><strong>Sie vermeiden RÃ¼ckrufschleifen</strong> und kÃ¶nnen den Zeitpunkt selbst festlegen.</p>
-    <!-- CALENDLY: Diesen Block ersetzen durch:
-    <div class="calendly-inline-widget" data-url="https://calendly.com/IHR-LINK" style="min-width:320px;height:630px;"></div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+    <h2>Möchten Sie schneller starten?</h2>
+    <p class="intro">Wählen Sie direkt einen Termin für ein kurzes Erstgespräch.<br><strong>Sie vermeiden Rückrufschleifen</strong> und können den Zeitpunkt selbst festlegen.</p>
+    <!--
+    ╔═════════════════════════════════════════════════════════╗
+    ║  CALENDLY — diesen Block ersetzen:                          ║
+    ║  <div class="calendly-inline-widget"                        ║
+    ║       data-url="https://calendly.com/IHR-LINK"              ║
+    ║       style="min-width:320px;height:630px;"></div>          ║
+    ║  <script src="https://assets.calendly.com/assets/          ║
+    ║  external/widget.js" async></script>                        ║
+    ╚═════════════════════════════════════════════════════════╝
+    -->
     <div class="cal-embed">
-      <div class="cal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-      <h3>Calendly-Integration hier einfÃ¼gen</h3>
-      <p>Ersetzen Sie diesen Block durch Ihren persÃ¶nlichen Calendly-Link.</p>
+      <div class="cal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <h3>Calendly-Integration hier einfügen</h3>
+      <p>Ersetzen Sie diesen Block durch Ihren persönlichen Calendly-Link.</p>
       <code>calendly.com/ihr-link</code>
     </div>
   </div>
+
+  <!-- BLOCK 4: SO GEHT ES WEITER -->
   <div class="card b-steps">
     <h2>So geht es jetzt weiter</h2>
     <div class="steps-list">
-      <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Wir prÃ¼fen Ihre Anfrage intern</strong> und bereiten uns auf das GesprÃ¤ch vor.</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Wir melden uns persÃ¶nlich</strong> bei Ihnen oder sprechen zum vereinbarten Termin.</div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Wir analysieren Ihre FlÃ¤chen</strong> und besprechen die konkreten Anforderungen.</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Sie erhalten eine erste EinschÃ¤tzung</strong> zur Umsetzbarkeit â ohne Verkaufsdruck.</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-text"><strong>Optional planen wir eine Live-Demo</strong> in vergleichbarer Umgebung â vor Ort oder per Video.</div></div>
+      <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Wir prüfen Ihre Anfrage intern</strong> und bereiten uns auf das Gespräch vor.</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Wir melden uns persönlich</strong> bei Ihnen oder sprechen zum vereinbarten Termin.</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Wir analysieren Ihre Flächen</strong> und besprechen die konkreten Anforderungen.</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Sie erhalten eine erste Einschätzung</strong> zur Umsetzbarkeit – ohne Verkaufsdruck.</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-text"><strong>Optional planen wir eine Live-Demo</strong> in vergleichbarer Umgebung – vor Ort oder per Video.</div></div>
     </div>
   </div>
+
+  <!-- BLOCK 5: CHECKLISTE (branchenspezifisch per JS) -->
   <div class="card b-check" id="b-check">
     <div class="check-header">
       <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-      <div><h2>Optional vorbereiten</h2><p class="check-sub">Diese drei Informationen helfen uns, Ihre Anfrage schneller und genauer einzuschÃ¤tzen.</p></div>
+      <div>
+        <h2>Optional vorbereiten</h2>
+        <p class="check-sub">Diese drei Informationen helfen uns, Ihre Anfrage schneller und genauer einzuschätzen.</p>
+      </div>
     </div>
-    <div class="check-items" id="check-items"></div>
-    <p class="check-opt">Diese Vorbereitung ist freiwillig â kein Muss, aber hilfreich.</p>
+    <div class="check-items" id="check-items"><!-- filled by JS --></div>
+    <p class="check-opt">Diese Vorbereitung ist freiwillig – kein Muss, aber hilfreich.</p>
   </div>
+
+  <!-- BACK BOTTOM -->
   <div class="back-bottom">
-    <a href="#" id="back-bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg><span id="back-bottom-label">ZurÃ¼ck zur vorherigen Seite</span></a>
+    <a href="#" id="back-bottom">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      <span id="back-bottom-label">Zurück zur vorherigen Seite</span>
+    </a>
   </div>
+
 </div>
 </main>
+
 <footer>
-  <p>LÃ¶we Smart Devices &nbsp;Â·&nbsp; HauptstraÃe 27, 87448 Waltenhofen &nbsp;Â·&nbsp; <a href="mailto:sales@loewe-smartdevices.com">sales@loewe-smartdevices.com</a> &nbsp;Â·&nbsp; <a href="tel:+4983799718">+49&nbsp;(0)8379&nbsp;9718</a></p>
-  <p style="margin-top:6px"><a href="impressum.html" style="color:var(--tm)">Impressum</a> &nbsp;Â·&nbsp; <a href="datenschutz.html" style="color:var(--tm)">Datenschutz</a></p>
+  <p>
+    Löwe Smart Devices &nbsp;·&nbsp; Hauptstraße 27, 87448 Waltenhofen<br>
+    <a href="mailto:sales@loewe-smartdevices.com">sales@loewe-smartdevices.com</a>
+    &nbsp;·&nbsp;
+    <a href="tel:+4983799718">+49&nbsp;(0)8379&nbsp;9718</a>
+  </p>
 </footer>
+
 <script>
 (function(){
-  var NAV={klinik:{url:'loewe-klinik.html',label:'ZurÃ¼ck zur KliniklÃ¶sung'},hotel:{url:'loewe-hotel.html',label:'ZurÃ¼ck zur HotellÃ¶sung'},industrie:{url:'loewe-industrie.html',label:'ZurÃ¼ck zur IndustrielÃ¶sung'},autohaus:{url:'loewe-autohaus.html',label:'ZurÃ¼ck zur AutohauslÃ¶sung'},retail:{url:'loewe-retail-einkaufszentrum.html',label:'ZurÃ¼ck zur RetaillÃ¶sung'},mall:{url:'loewe-retail-einkaufszentrum.html',label:'ZurÃ¼ck zur RetaillÃ¶sung'},reinigungsunternehmen:{url:'loewe-reinigungsunternehmen.html',label:'ZurÃ¼ck zur PartnerlÃ¶sung'},main:{url:'loewe-v3.html',label:'ZurÃ¼ck zur Startseite'}};
-  var DEFAULT={url:'loewe-v3.html',label:'ZurÃ¼ck zur Startseite'};
-  var CL={klinik:['Wie groÃ sind die wichtigsten FlÃ¤chen (z. B. Flure oder Stationen)?','Zu welchen Zeiten darf gereinigt werden (Tag / Nacht)?','Gibt es besonders sensible Bereiche?'],hotel:['Welche Bereiche haben den grÃ¶Ãten Reinigungsbedarf?','Zu welchen Zeiten sind FlÃ¤chen frei zugÃ¤nglich?','Gibt es StoÃzeiten oder hohe GÃ¤stewechsel?'],autohaus:['Welche FlÃ¤chen sollen gereinigt werden (Showroom / Werkstatt)?','Wie groÃ sind die wichtigsten Bereiche?','Gibt es stark frequentierte Zonen?'],industrie:['Welche Hallen oder Bereiche sind relevant?','Welche Bodenarten sind vorhanden?','Gibt es feste Reinigungszeiten?'],retail:['Welche Hauptbereiche sind betroffen?','Wie hoch ist die Besucherfrequenz?','Gibt es Nacht- oder Randzeiten fÃ¼r die Reinigung?'],mall:['Welche Hauptbereiche sind betroffen?','Wie hoch ist die Besucherfrequenz?','Gibt es Nacht- oder Randzeiten fÃ¼r die Reinigung?'],reinigungsunternehmen:['Welche Kundentypen betreuen Sie aktuell?','Welche FlÃ¤chen sind besonders zeitintensiv?','Wo bestehen aktuell PersonalengpÃ¤sse?']};
-  var CL_DEFAULT=['Wie groÃ ist die FlÃ¤che ungefÃ¤hr?','Welche Bereiche sind besonders relevant?','Zu welchen Zeiten wird aktuell gereinigt?'];
-  var param=new URLSearchParams(window.location.search).get('from');
-  var dest=(param&&NAV[param])?NAV[param]:null;
-  if(!dest&&document.referrer){var ref=document.referrer;for(var k in NAV){if(ref.indexOf(NAV[k].url)!==-1){dest=NAV[k];break;}}}
-  if(!dest)dest=DEFAULT;
-  function setLink(elId,lblId){var el=document.getElementById(elId);var lb=document.getElementById(lblId);if(el)el.href=dest.url;if(lb)lb.textContent='← '+dest.label;}
-  setLink('nav-back','nav-back-label');
-  setLink('back-bottom','back-bottom-label');
-  var items=(param&&CL[param])?CL[param]:CL_DEFAULT;
-  var container=document.getElementById('check-items');
-  if(container){container.innerHTML=items.map(function(t){return '<div class="ci">'+t+'</div>';}).join('');}
+
+  var NAV = {
+    klinik:                {url:'loewe-klinik.html',                 label:'← Zurück zur Kliniklösung'},
+    hotel:                 {url:'loewe-hotel.html',                  label:'← Zurück zur Hotellösung'},
+    industrie:             {url:'loewe-industrie.html',              label:'← Zurück zur Industrielösung'},
+    autohaus:              {url:'loewe-autohaus.html',               label:'← Zurück zur Autohauslösung'},
+    retail:                {url:'loewe-retail-einkaufszentrum.html', label:'← Zurück zur Retaillösung'},
+    mall:                  {url:'loewe-retail-einkaufszentrum.html', label:'← Zurück zur Retaillösung'},
+    reinigungsunternehmen: {url:'loewe-reinigungsunternehmen.html',  label:'← Zurück zur Partnerlösung'},
+    main:                  {url:'loewe-v3.html',                     label:'← Zurück zur Startseite'}
+  };
+  var DEFAULT = {url:'loewe-v3.html', label:'← Zurück zur Startseite'};
+
+  var CL = {
+    klinik: [
+      'Wie groß sind die wichtigsten Flächen (z. B. Flure oder Stationen)?',
+      'Zu welchen Zeiten darf gereinigt werden (Tag / Nacht)?',
+      'Gibt es besonders sensible Bereiche?'
+    ],
+    hotel: [
+      'Welche Bereiche haben den größten Reinigungsbedarf?',
+      'Zu welchen Zeiten sind Flächen frei zugänglich?',
+      'Gibt es Stoßzeiten oder hohe Gästewechsel?'
+    ],
+    autohaus: [
+      'Welche Flächen sollen gereinigt werden (Showroom / Werkstatt)?',
+      'Wie groß sind die wichtigsten Bereiche?',
+      'Gibt es stark frequentierte Zonen?'
+    ],
+    industrie: [
+      'Welche Hallen oder Bereiche sind relevant?',
+      'Welche Bodenarten sind vorhanden?',
+      'Gibt es feste Reinigungszeiten?'
+    ],
+    retail: [
+      'Welche Hauptbereiche sind betroffen?',
+      'Wie hoch ist die Besucherfrequenz?',
+      'Gibt es Nacht- oder Randzeiten für die Reinigung?'
+    ],
+    mall: [
+      'Welche Hauptbereiche sind betroffen?',
+      'Wie hoch ist die Besucherfrequenz?',
+      'Gibt es Nacht- oder Randzeiten für die Reinigung?'
+    ],
+    reinigungsunternehmen: [
+      'Welche Kundentypen betreuen Sie aktuell?',
+      'Welche Flächen sind besonders zeitintensiv?',
+      'Wo bestehen aktuell Personalengpässe?'
+    ]
+  };
+  var CL_DEFAULT = [
+    'Wie groß ist die Fläche ungefähr?',
+    'Welche Bereiche sind besonders relevant?',
+    'Zu welchen Zeiten wird aktuell gereinigt?'
+  ];
+
+  var param = new URLSearchParams(window.location.search).get('from');
+  var dest  = (param && NAV[param]) ? NAV[param] : null;
+
+  if (!dest && document.referrer) {
+    var ref = document.referrer;
+    for (var k in NAV) {
+      if (ref.indexOf(NAV[k].url) !== -1) { dest = NAV[k]; break; }
+    }
+  }
+  if (!dest) dest = DEFAULT;
+
+  function setLink(elId, lblId) {
+    var el = document.getElementById(elId);
+    var lb = document.getElementById(lblId);
+    if (el) el.href        = dest.url;
+    if (lb) lb.textContent = dest.label;
+  }
+  setLink('nav-back',    'nav-back-label');
+  setLink('back-bottom', 'back-bottom-label');
+
+  var items = (param && CL[param]) ? CL[param] : CL_DEFAULT;
+  var container = document.getElementById('check-items');
+  if (container) {
+    container.innerHTML = items.map(function(t){
+      return '<div class="ci">' + t + '</div>';
+    }).join('');
+  }
+
 })();
 </script>
+
 </body>
 </html>
